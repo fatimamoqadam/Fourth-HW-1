@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Proverb Gallery</title>
+  <style>
+    body {
+      font-family: 'Noto Serif', serif;
+      background-color: #fff8dc; /* light beige */
+      color: #4b3b2b; /* warm dark brown */
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #8B4513;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #daa520;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .proverb-card {
+      background-color: #f5f5dc;
+      border: 2px solid #daa520;
+      border-radius: 8px;
+      padding: 1.5rem;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+    .proverb-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      border-color: #b07a2b;
+    }
+    .native {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #8B4513;
+    }
+    .meaning {
+      font-size: 1rem;
+      color: #4b3b2b;
+      opacity: 0;
+      max-height: 0;
+      transition: opacity 0.4s ease, max-height 0.4s ease;
+      overflow: hidden;
+    }
+    .proverb-card:hover .meaning {
+      opacity: 1;
+      max-height: 200px;
+      margin-top: 1rem;
+    }
+    /* Link wrapper style to fill the card */
+    .proverb-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+    footer {
+      background-color: #daa520;
+      color: black;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      border-radius: 0 0 8px 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Proverb Gallery</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="wall.html">Interactive Wall</a>
+    </nav>
+  </header>
+
+  <section class="gallery">
+    <div class="proverb-card">
+      <a href="detail.html" class="proverb-link">
+        <p class="native">صبر با میوه رسد</p>
+        <div class="meaning">With patience, the fruit will come which means patience brings results over time.</div>
+      </a>
+    </div>
+    <div class="proverb-card">
+      <a href="detail.html" class="proverb-link">
+        <p class="native">هر کس کو کار خویش</p>
+        <div class="meaning">Everyone has their own work, meaning everyone should focus on their own responsibilities.</div>
+      </a>
+    </div>
+    <div class="proverb-card">
+      <a href="detail.html" class="proverb-link">
+        <p class="native">آب که از سر گذشت چه یک وجب چه صد وجب</p>
+        <div class="meaning">When water passes over your head, whether an inch or a hundred inches, meaning when a situation is out of control, all measures are futile.</div>
+      </a>
+    </div>
+    <div class="proverb-card">
+      <a href="detail.html" class="proverb-link">
+        <p class="native">دوستی حقیقی مثل سلامتی است</p>
+        <div class="meaning">True friendship is like health; its value is rarely known until it is lost.</div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Afghan Proverbs. All rights reserved.</p>
+    <p>Designed by FM.</p>
+  </footer>
+</body>
+</html>
