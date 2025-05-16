@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F5F5DC;
+  margin: 0;
+  color: #333;
+}
+
+header {
+  background-color: #8B4513;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: #DAA520;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.proverb-card {
+  background-color: #fff8e1;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 15px;
+  transition: transform 0.3s;
+  font-family: 'Noto Serif', serif;
+}
+
+.proverb-card:hover {
+  transform: scale(1.05);
+}
+
+.hover-reveal .meaning {
+  display: none;
+}
+
+.hover-reveal:hover .meaning {
+  display: block;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+section.featured, section.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
